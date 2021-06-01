@@ -1,7 +1,7 @@
 FROM registry.cn-shenzhen.aliyuncs.com/titanide/golang:1.16.4-alpine3.13 as builder
 
 ARG APP_NAME=foo
-ARG CONTEXT=cmd/${APP_NAME}
+ARG CONTEXT=.
 ARG GOPROXY=https://goproxy.cn
 ARG GIT_USER="nothing"
 ARG GIT_ACCESS_TOKEN="nothing"
