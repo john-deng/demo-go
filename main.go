@@ -22,6 +22,7 @@ import (
 	"github.com/hidevopsio/hiboot/pkg/app/web"
 	"github.com/hidevopsio/hiboot/pkg/at"
 	"github.com/hidevopsio/hiboot/pkg/starter/actuator"
+	"github.com/hidevopsio/hiboot/pkg/starter/logging"
 	"github.com/hidevopsio/hiboot/pkg/starter/swagger"
 )
 
@@ -57,6 +58,6 @@ func main() {
 
 	// create new web application and run it
 	web.NewApplication(new(Controller)).
-		SetProperty(app.ProfilesInclude, swagger.Profile, web.Profile, actuator.Profile).
+		SetProperty(app.ProfilesInclude, swagger.Profile, web.Profile, actuator.Profile, logging.Profile).
 		Run()
 }
